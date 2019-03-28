@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BlueBadge.Models.PlayerModels.PlayerListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Players</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActiveSince)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActiveSince)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PlayerID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PlayerID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PlayerID })
+            </td>
+        </tr>
+    }
+</table>
+    <div class="wrapper">
+        <img class="players" src="~/Content/players.jpg" alt="17 basket" />
+    </div>
+

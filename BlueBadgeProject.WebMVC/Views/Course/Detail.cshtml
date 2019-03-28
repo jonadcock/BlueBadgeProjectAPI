@@ -1,0 +1,74 @@
+﻿@model BlueBadge.Models.CourseModels.CourseDetail
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Course Details</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CoursePar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoursePar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CourseRating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseRating)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

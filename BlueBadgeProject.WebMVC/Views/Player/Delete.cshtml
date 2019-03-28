@@ -1,0 +1,48 @@
+﻿@model BlueBadge.Models.PlayerModels.PlayerDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Erase Player</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActiveSince)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActiveSince)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

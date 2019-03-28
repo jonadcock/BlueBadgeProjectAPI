@@ -1,0 +1,18 @@
+namespace BlueBadge.Data.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class data : DbMigration
+    {
+        public override void Up()
+        {
+            DropColumn("dbo.CourseRating", "CourseName");
+        }
+        
+        public override void Down()
+        {
+            AddColumn("dbo.CourseRating", "CourseName", c => c.String());
+        }
+    }
+}
